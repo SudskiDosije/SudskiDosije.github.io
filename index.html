@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudski Dosije</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        header {
+            background: #111;
+            border-bottom: 3px solid #c40000;
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #d00000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d00000;
+        }
+
+        .hero {
+            min-height: 420px;
+            padding: 90px 7%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+                #191919;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            max-width: 750px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #d00000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ccc;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c40000;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 50px 7%;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            border-left: 5px solid #c40000;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #151515;
+            padding: 25px;
+            border: 1px solid #292929;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        SUDSKI <span>DOSIJE</span>
+    </div>
+
+    <nav>
+        <a href="#">Početna</a>
+        <a href="#">Vijesti</a>
+        <a href="#">Sudski procesi</a>
+        <a href="#">Kriminal</a>
+        <a href="#">Zanimljivosti</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>ISTINA UVIJEK <span>IZAĐE NA VIDJELO</span></h1>
+
+        <p>
+            Najnovije vijesti, sudski procesi, kriminalistički slučajevi
+            i zanimljive priče iz BiH i regiona.
+        </p>
+
+        <a href="#najnovije" class="button">NAJNOVIJE VIJESTI</a>
+    </div>
+</section>
+
+<section class="section" id="najnovije">
+    <h2>Najnovije objave</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Dobrodošli na Sudski Dosije</h3>
+            <p>
+                Pratimo najvažnije sudske procese, kriminalističke slučajeve
+                i vijesti iz BiH i regiona.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sudski procesi</h3>
+            <p>
+                Najnovije informacije i događaji vezani za sudske postupke.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Kriminal</h3>
+            <p>
+                Zanimljivi i aktuelni slučajevi koji privlače pažnju javnosti.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Sudski Dosije — Istina uvijek izađe na vidjelo.
+</footer>
+
+</body>
+</html>
