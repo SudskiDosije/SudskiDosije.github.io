@@ -1,328 +1,493 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudski Dosije</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudski Dosije | Vijesti i sudski procesi</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: white;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0d;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
 
-        header {
-            background: #111;
-            border-bottom: 3px solid #c40000;
-            padding: 20px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+header {
+    background: #111;
+    border-bottom: 3px solid #c40000;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+.top {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        .logo span {
-            color: #d00000;
-        }
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: bold;
-        }
+.logo span {
+    color: #d00000;
+}
 
-        nav a:hover {
-            color: #d00000;
-        }
+.tagline {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
 
-        .hero {
-            min-height: 420px;
-            padding: 90px 7%;
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
-                #191919;
-        }
+nav {
+    background: #191919;
+    border-top: 1px solid #292929;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            max-width: 750px;
-            margin-bottom: 20px;
-        }
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 13px 20px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-        .hero h1 span {
-            color: #d00000;
-        }
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-        .hero p {
-            font-size: 20px;
-            color: #ccc;
-            max-width: 650px;
-            margin-bottom: 30px;
-        }
+nav a:hover {
+    color: #e00000;
+}
 
-        .button {
-            display: inline-block;
-            background: #c40000;
-            color: white;
-            padding: 14px 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.hero {
+    background: linear-gradient(110deg, #171717, #090909);
+    border-bottom: 1px solid #292929;
+    padding: 65px 20px;
+}
 
-        .section {
-            padding: 50px 7%;
-        }
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .section h2 {
-            font-size: 32px;
-            border-left: 5px solid #c40000;
-            padding-left: 15px;
-            margin-bottom: 30px;
-        }
+.label {
+    display: inline-block;
+    background: #c40000;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.hero h1 {
+    font-size: clamp(35px, 6vw, 62px);
+    line-height: 1.12;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
 
-        .card {
-            background: #151515;
-            padding: 25px;
-            border: 1px solid #292929;
-        }
+.hero h1 span {
+    color: #d00000;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-        }
+.hero p {
+    color: #bbb;
+    max-width: 650px;
+    font-size: 17px;
+}
 
-        .card p {
-            color: #aaa;
-            line-height: 1.6;
-        }
+.main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 20px;
+}
 
-        footer {
-            background: #050505;
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            border-top: 1px solid #222;
-        }
+.section-title {
+    font-size: 27px;
+    border-left: 5px solid #c40000;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
 
-        @media (max-width: 800px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
 
-            nav a {
-                margin: 0 7px;
-                font-size: 14px;
-            }
+.card {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 25px;
+    border-radius: 5px;
+    transition: border-color .2s;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+.card:hover {
+    border-color: #a90000;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.category {
+    color: #e00000;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 22px;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #c0c0c0;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.card strong {
+    color: #fff;
+}
+
+.source {
+    border-top: 1px solid #303030;
+    padding-top: 12px;
+    margin-top: 18px;
+    color: #888;
+    font-size: 12px;
+}
+
+.notice {
+    background: #201313;
+    border-left: 3px solid #c40000;
+    padding: 12px;
+    color: #ddd;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.about {
+    margin-top: 45px;
+    background: #141414;
+    padding: 28px;
+    border: 1px solid #292929;
+}
+
+.about h2 {
+    margin-bottom: 12px;
+}
+
+.about p {
+    color: #aaa;
+}
+
+footer {
+    background: #050505;
+    border-top: 2px solid #c40000;
+    padding: 30px 20px;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+}
+
+@media(max-width: 750px) {
+    .top {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-inner {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        SUDSKI <span>DOSIJE</span>
+    <div class="top">
+        <div>
+            <div class="logo">SUDSKI <span>DOSIJE</span></div>
+            <div class="tagline">ISTINA UVIJEK IZAĐE NA VIDJELO</div>
+        </div>
     </div>
 
     <nav>
-        <a href="#">Početna</a>
-        <a href="#">Vijesti</a>
-        <a href="#">Sudski procesi</a>
-        <a href="#">Kriminal</a>
-        <a href="#">Zanimljivosti</a>
+        <div class="nav-inner">
+            <a href="#">POČETNA</a>
+            <a href="#najnovije">NAJNOVIJE VIJESTI</a>
+            <a href="#sudski-procesi">SUDSKI PROCESI</a>
+            <a href="#kriminal">KRIMINAL</a>
+            <a href="#o-nama">O NAMA</a>
+        </div>
     </nav>
 </header>
 
 <section class="hero">
-    <div>
-        <h1>ISTINA UVIJEK <span>IZAĐE NA VIDJELO</span></h1>
-
+    <div class="hero-inner">
+        <div class="label">INFORMATIVNI PORTAL</div>
+        <h1>ISTINA UVIJEK <span>IZAĐE NA VIDJELO.</span></h1>
         <p>
-            Najnovije vijesti, sudski procesi, kriminalistički slučajevi
-            i zanimljive priče iz BiH i regiona.
+            Pratimo sudske procese, kriminalističke slučajeve,
+            pravosuđe i najvažnije događaje iz Bosne i Hercegovine
+            i regiona.
         </p>
-
-        <a href="#najnovije" class="button">NAJNOVIJE VIJESTI</a>
     </div>
 </section>
 
-<section class="section" id="najnovije">
-    <h2>Najnovije objave</h2>
+<main class="main" id="najnovije">
 
-    <div class="card" style="grid-column: 1 / -1;">
+    <h2 class="section-title">Najnovije vijesti</h2>
 
-    <h3>Suđenje Zijadu Turkoviću se ponavlja?</h3>
+    <div class="news-grid">
 
-    <p>
-        <strong>NEZVANIČNO:</strong> Prema informacijama koje su došle do naše redakcije,
-        postoji mogućnost da bi se postupak protiv Zijada Turkovića mogao ponovo otvoriti.
-    </p>
+        <article class="card" id="kriminal">
+            <div class="category">Nezvanične informacije</div>
+            <h2>Suđenje Zijadu Turkoviću se ponavlja?</h2>
 
-    <p>
-        Razlozi za eventualno ponovno pokretanje postupka za sada nisu poznati
-        niti su zvanično potvrđeni.
-    </p>
+            <p>
+                <strong>NEZVANIČNO:</strong> Prema informacijama koje su
+                došle do naše redakcije, postoji mogućnost da bi se
+                postupak protiv Zijada Turkovića mogao ponovo otvoriti.
+            </p>
 
-    <p>Među mogućim razlozima koji se spominju su:</p>
+            <p>
+                Razlozi za eventualno ponovno pokretanje postupka
+                za sada nisu poznati niti su zvanično potvrđeni.
+            </p>
 
-    <p>
-        • mogući sporni iskazi svjedoka ili pokajnika tokom ranijeg postupka<br>
-        • eventualno pronalaženje novih dokaza ili činjenica<br>
-        • odluka Ustavnog suda BiH<br>
-        • drugi procesni razlozi
-    </p>
+            <p>Među mogućim razlozima koji se spominju su:</p>
 
-    <p>
-        <strong>Važno:</strong> Sudski Dosije trenutno nema zvaničnu potvrdu ovih navoda.
-        Informaciju objavljujemo kao <strong>nezvaničnu i nepotvrđenu</strong>.
-    </p>
-<div class="card" style="grid-column: 1 / -1;">
+            <p>
+                • mogući sporni iskazi svjedoka ili pokajnika tokom
+                ranijeg postupka<br>
+                • eventualno pronalaženje novih dokaza ili činjenica<br>
+                • odluka Ustavnog suda BiH<br>
+                • drugi procesni razlozi
+            </p>
 
-    <h3>Milan Mijić oslobođen optužbe pred Sudom BiH</h3>
+            <div class="notice">
+                Sudski Dosije trenutno nema zvaničnu potvrdu ovih navoda.
+                Informaciju objavljujemo kao nezvaničnu i nepotvrđenu.
+            </div>
+        </article>
 
-    <p>
-        <strong>SARAJEVO —</strong> Sud Bosne i Hercegovine donio je prvostepenu
-        presudu kojom je Milan Mijić oslobođen optužbe.
-    </p>
+        <article class="card" id="sudski-procesi">
+            <div class="category">Sudski procesi</div>
+            <h2>Milan Mijić oslobođen optužbe pred Sudom BiH</h2>
 
-    <p>
-        Prema informacijama objavljenim na stranici Suda BiH, sudsko vijeće je
-        nakon provedenog postupka donijelo odluku kojom je Mijić oslobođen.
-    </p>
+            <p>
+                <strong>SARAJEVO —</strong> Sud Bosne i Hercegovine
+                donio je prvostepenu presudu kojom je Milan Mijić
+                oslobođen optužbe.
+            </p>
 
-    <p>
-        Ovo je <strong>prvostepena presuda</strong>, što znači da postupak nije
-        nužno pravosnažno završen i da postoji mogućnost žalbe.
-    </p>
+            <p>
+                Prema informacijama objavljenim na stranici Suda BiH,
+                sudsko vijeće je nakon provedenog postupka donijelo
+                odluku kojom je Mijić oslobođen.
+            </p>
 
-    <p>
-        <strong>Sudski Dosije</strong> će pratiti dalji tok ovog slučaja i objaviti
-        nove informacije ukoliko dođe do zvaničnih promjena u postupku.
-    </p>
-<div class="card" style="grid-column: 1 / -1;">
+            <p>
+                Ovo je <strong>prvostepena presuda</strong>, što znači
+                da postupak nije nužno pravosnažno završen i da postoji
+                mogućnost žalbe.
+            </p>
 
-    <h3>Vrhovni sud FBiH potvrdio osuđujući dio presude Kabiloviću i Haliloviću</h3>
+            <p>
+                Sudski Dosije će pratiti dalji tok ovog slučaja i
+                objaviti nove informacije ukoliko dođe do zvaničnih
+                promjena u postupku.
+            </p>
+        </article>
 
-    <p>
-        Vrhovni sud Federacije BiH potvrdio je presudu Kantonalnog suda u Tuzli
-        u dijelu kojim su Beriz Kabilović i Armin Halilović oglašeni krivim
-        za organizirani kriminal u vezi s više krivičnih djela.
-    </p>
+        <article class="card">
+            <div class="category">Pravosuđe</div>
+            <h2>Vrhovni sud FBiH potvrdio osuđujući dio presude Kabiloviću i Haliloviću</h2>
 
-    <p>
-        Kabiloviću je potvrđena jedinstvena kazna zatvora od 19 godina,
-        dok je Haliloviću potvrđena kazna od 6 godina i 6 mjeseci zatvora.
-    </p>
+            <p>
+                Vrhovni sud Federacije BiH potvrdio je presudu
+                Kantonalnog suda u Tuzli u dijelu kojim su Beriz
+                Kabilović i Armin Halilović oglašeni krivim za
+                organizirani kriminal u vezi s više krivičnih djela.
+            </p>
 
-    <p>
-        Vrhovni sud FBiH je istovremeno ukinuo dio prvostepene presude
-        kojim su bili oslobođeni određenih optužbi te je za taj dio
-        postupka određen pretres pred Vrhovnim sudom FBiH.
-    </p>
+            <p>
+                Kabiloviću je potvrđena jedinstvena kazna zatvora
+                od 19 godina, dok je Haliloviću potvrđena kazna
+                od 6 godina i 6 mjeseci zatvora.
+            </p>
 
-    <p>
-        <strong>Sudski Dosije</strong> nastavlja pratiti ovaj slučaj.
-    </p>
+            <p>
+                Vrhovni sud FBiH je istovremeno ukinuo dio prvostepene
+                presude kojim su bili oslobođeni određenih optužbi te
+                je za taj dio postupka određen pretres pred Vrhovnim
+                sudom FBiH.
+            </p>
 
-</div>
+            <p><strong>Sudski Dosije</strong> nastavlja pratiti ovaj slučaj.</p>
+        </article>
 
+        <article class="card">
+            <div class="category">Vijesti iz pravosuđa</div>
+            <h2>Sud BiH: Aktuelna dešavanja i rad institucije</h2>
 
-<div class="card" style="grid-column: 1 / -1;">
+            <p>
+                Sud Bosne i Hercegovine objavio je informacije o
+                aktuelnim dešavanjima i radu institucije.
+            </p>
 
-    <h3>Sud BiH: Aktuelna dešavanja i rad institucije</h3>
+            <p>
+                Među objavljenim informacijama je i posjeta sudija
+                i tužilaca iz Sjedinjenih Američkih Država
+                Sudu Bosne i Hercegovine.
+            </p>
 
-    <p>
-        Sud Bosne i Hercegovine danas je objavio informacije o aktuelnim
-        dešavanjima i radu institucije.
-    </p>
+            <p>
+                Tokom posjete razgovarano je o radu Suda BiH
+                i funkcionisanju pravosudnih institucija.
+            </p>
 
-    <p>
-        Među objavljenim informacijama je i posjeta sudija i tužilaca
-        iz Sjedinjenih Američkih Država Sudu Bosne i Hercegovine.
-    </p>
+            <p>
+                <strong>Sudski Dosije</strong> nastavlja pratiti
+                najvažnije informacije iz pravosuđa u BiH.
+            </p>
+        </article>
 
-    <p>
-        Tokom posjete razgovarano je o radu Suda BiH i funkcionisanju
-        pravosudnih institucija.
-    </p>
+        <article class="card">
+            <div class="category">Ratni zločini</div>
+            <h2>Sud BiH potvrdio optužnicu protiv šest osoba zbog zločina protiv čovječnosti</h2>
 
-    <p>
-        <strong>Sudski Dosije</strong> nastavlja pratiti najvažnije
-        informacije iz pravosuđa u BiH.
-    </p>
-<div class="card" style="grid-column: 1 / -1; width: 100%;">
+            <p>
+                <strong>SARAJEVO, 9. oktobar 2026.</strong> —
+                Sud Bosne i Hercegovine potvrdio je optužnicu protiv
+                šest osoba koje se terete za zločine protiv čovječnosti
+                na području općine Sanski Most tokom 1992. godine.
+            </p>
 
-    <h3>Sud BiH potvrdio optužnicu protiv šest osoba zbog zločina protiv čovječnosti</h3>
+            <p>
+                Optužnicom su obuhvaćeni Drago Vujanić, Milan Ivanić,
+                Mile Došenović, Jugoslav Rodić, Milorad Bilbija i
+                Simo Simetić. Prema navodima Tužilaštva BiH, optužbe
+                se odnose na navodni progon nesrpskog civilnog
+                stanovništva na političkoj, nacionalnoj, etničkoj
+                i vjerskoj osnovi.
+            </p>
 
-    <p><strong>SARAJEVO, 9. oktobar 2026.</strong> — Sud Bosne i Hercegovine potvrdio je optužnicu protiv šest osoba koje se terete za zločine protiv čovječnosti na području općine Sanski Most tokom 1992. godine.</p>
+            <p>
+                U optužnici se navode različiti oblici navodnog
+                nezakonitog postupanja prema civilima, uključujući
+                nezakonita zatvaranja, lišavanje života, mučenje
+                i druga nečovječna djela.
+            </p>
 
-    <p>Optužnicom su obuhvaćeni Drago Vujanić, Milan Ivanić, Mile Došenović, Jugoslav Rodić, Milorad Bilbija i Simo Simetić. Prema navodima Tužilaštva BiH, optužbe se odnose na navodni progon nesrpskog civilnog stanovništva na političkoj, nacionalnoj, etničkoj i vjerskoj osnovi.</p>
+            <div class="notice">
+                Potvrđivanje optužnice ne znači da su optuženi krivi.
+                Svaka osoba smatra se nevinom dok se krivica ne
+                utvrdi pravosnažnom presudom.
+            </div>
 
-    <p>U optužnici se navode različiti oblici navodnog nezakonitog postupanja prema civilima, uključujući nezakonita zatvaranja, lišavanje života, mučenje i druga nečovječna djela. Ovi navodi tek trebaju biti razmatrani u sudskom postupku.</p>
+            <div class="source">
+                Izvor: Sud Bosne i Hercegovine — 9. oktobar 2026.
+            </div>
+        </article>
 
-    <p>Predmet se odnosi na događaje iz ratnog perioda, a dalji tok postupka zavisit će od izvođenja dokaza, iskaza svjedoka i odluka nadležnog suda.</p>
+        <article class="card">
+            <div class="category">Sudski procesi</div>
+            <h2>Zdravko Šagolj osuđen na dvije godine i deset mjeseci zatvora</h2>
 
-    <p><strong>Važno:</strong> Potvrđivanje optužnice ne znači da su optuženi krivi. Svaka osoba smatra se nevinom dok se krivica ne utvrdi pravosnažnom presudom.</p>
+            <p>
+                <strong>SARAJEVO —</strong> Sud Bosne i Hercegovine
+                objavio je prvostepenu presudu u predmetu protiv
+                Zdravka Šagolja, kojem je izrečena kazna zatvora
+                u trajanju od dvije godine i deset mjeseci.
+            </p>
 
-    <p><strong>Sudski Dosije</strong> nastavlja pratiti važna dešavanja pred pravosudnim institucijama Bosne i Hercegovine.</p>
+            <p>
+                Prema informacijama objavljenim na stranici Suda BiH,
+                predmet se odnosi na organizirani kriminal u vezi s
+                neovlaštenim prometom opojnih droga. Presuda je
+                donesena nakon postupanja suda u vezi sa sporazumom
+                o priznanju krivnje i izricanjem krivičnopravne sankcije.
+            </p>
 
-    <p><small>Izvor: Sud Bosne i Hercegovine — 9. oktobar 2026.</small></p>
+            <p>
+                Izricanje kazne predstavlja odluku prvostepenog suda.
+                Da li će presuda postati pravosnažna zavisi od daljeg
+                toka postupka i eventualnog korištenja zakonom
+                predviđenih pravnih lijekova.
+            </p>
 
-</div>
+            <p>
+                <strong>Sudski Dosije</strong> nastavit će pratiti
+                sudske postupke i objavljivati informacije koje su
+                potvrđene od nadležnih institucija.
+            </p>
 
+            <div class="source">
+                Izvor: Sud Bosne i Hercegovine — saopštenje objavljeno
+                9. oktobra 2026.
+            </div>
+        </article>
 
-<div class="card" style="grid-column: 1 / -1; width: 100%;">
+    </div>
 
-    <h3>Zdravko Šagolj osuđen na dvije godine i deset mjeseci zatvora</h3>
+    <section class="about" id="o-nama">
+        <h2>O portalu Sudski Dosije</h2>
+        <p>
+            Sudski Dosije je informativni portal posvećen praćenju
+            sudskih procesa, kriminalističkih slučajeva, pravosuđa
+            i drugih događaja iz BiH i regiona.
+            Naš cilj je informisati javnost odgovorno i jasno,
+            uz oslanjanje na provjerljive izvore.
+        </p>
+    </section>
 
-    <p><strong>SARAJEVO, 10. oktobar 2026.</strong> — Sud Bosne i Hercegovine objavio je prvostepenu presudu u predmetu protiv Zdravka Šagolja, kojem je izrečena kazna zatvora u trajanju od dvije godine i deset mjeseci.</p>
-
-    <p>Prema informacijama objavljenim na stranici Suda BiH, predmet se odnosi na organizirani kriminal u vezi s neovlaštenim prometom opojnih droga. Presuda je donesena nakon postupanja suda u vezi sa sporazumom o priznanju krivnje i izricanjem krivičnopravne sankcije.</p>
-
-    <p>Izricanje kazne predstavlja odluku prvostepenog suda. Da li će presuda postati pravosnažna zavisi od daljeg toka postupka i eventualnog korištenja zakonom predviđenih pravnih lijekova.</p>
-
-    <p>Slučajevi povezani s organiziranim kriminalom i prometom opojnih droga predstavljaju važan dio rada pravosudnih institucija. Zbog toga je važno javnost informisati o sudskim odlukama na osnovu zvaničnih izvora, bez prejudiciranja ishoda postupka.</p>
-
-    <p><strong>Sudski Dosije</strong> nastavit će pratiti sudske postupke i objavljivati informacije koje su potvrđene od nadležnih institucija.</p>
-
-    <p><small>Izvor: Sud Bosne i Hercegovine — saopštenje objavljeno 9. oktobra 2026.</small></p>
-
-</div>
-</div>
-</div>
-</div>
+</main>
 
 <footer>
-    © 2026 Sudski Dosije — Istina uvijek izađe na vidjelo.
+    <strong>SUDSKI DOSIJE</strong><br>
+    Istina uvijek izađe na vidjelo.<br><br>
+    © 2026 Sudski Dosije — Sva prava zadržana.
 </footer>
 
 </body>
