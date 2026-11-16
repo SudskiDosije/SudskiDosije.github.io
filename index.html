@@ -1,48 +1,254 @@
 
-<article class="card">
-    <div class="category">KRIMINAL / DROGA</div>
-    <h2><a href="vijest7.html">150 kilograma droge, amfetaminsko ulje i više od 100.000 KM: razbijane dvije kriminalne grupe</a></h2>
-    <p>FUP i druge policijske agencije provele su veliku akciju protiv osumnjičenih za trgovinu drogom i pranje novca.</p>
-</article>
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudski Dosije | Crna hronika i sudske vijesti</title>
 
-<article class="card">
-    <div class="category">POLICIJSKA HRONIKA</div>
-    <h2><a href="vijest8.html">Nihad Bjelak uhapšen u Sarajevu: Policija zaplijenila 73 kilograma marihuane</a></h2>
-    <p>Pripadnici FUP-a presreli su vozilo na Marijin Dvoru. Uslijedilo je hapšenje osumnjičenog.</p>
-</article>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<article class="card">
-    <div class="category">MEĐUNARODNI KRIMINAL</div>
-    <h2><a href="vijest9.html">Droga stigla iz luke Ploče: Devet osoba uhapšeno u međunarodnoj istrazi</a></h2>
-    <p>SIPA je zaplijenila 40 kilograma kanabisa u akciji koja je provedena u saradnji s hrvatskom policijom.</p>
-</article>
+body {
+    margin: 0;
+    background: #0b0b0b;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
 
-<article class="card">
-    <div class="category">DROGA I ORUŽJE</div>
-    <h2><a href="vijest10.html">Kokain, heroin, marihuana i tri pištolja pronađeni tokom pretresa 12 lokacija</a></h2>
-    <p>Šest osoba lišeno je slobode tokom zajedničke akcije SIPA-e i policijskih agencija.</p>
-</article>
+header {
+    background: #111111;
+    padding: 25px 7%;
+    border-bottom: 3px solid #c40000;
+}
 
-<article class="card">
-    <div class="category">LAŽNI DOKUMENTI</div>
-    <h2><a href="vijest11.html">Lažna EUROPOL-ova iskaznica i lijekovi: SIPA uhapsila četiri osobe</a></h2>
-    <p>Tokom pretresa pronađeno je pet krivotvorenih iskaznica međunarodnih organizacija.</p>
-</article>
+.logo {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
 
-<article class="card">
-    <div class="category">ORGANIZOVANI KRIMINAL</div>
-    <h2><a href="vijest12.html">„Šmrk“ i „Magla“ pred sudom: Optužnica zbog droge, oružja i pranja novca</a></h2>
-    <p>Tužilaštvo BiH podiglo je optužnicu protiv Admira Arnautovića i Adnana Maglića, oslanjajući se i na dokaze iz SKY aplikacija.</p>
-</article>
+.logo span {
+    color: #e00000;
+}
 
-<article class="card">
-    <div class="category">SKY I PRANJE NOVCA</div>
-    <h2><a href="vijest13.html">Više od šest miliona KM: Kako je novac sumnjivog porijekla završavao u legalnim tokovima</a></h2>
-    <p>U predmetu sa dokazima iz SKY aplikacija obuhvaćeno je 18 fizičkih i pravnih osoba.</p>
-</article>
+nav {
+    margin-top: 15px;
+}
 
-<article class="card">
-    <div class="category">ISTRAGE I HAPŠENJA</div>
-    <h2><a href="vijest14.html">Petnaest uhapšenih, devet automobila i motocikl: Detalji velike policijske akcije</a></h2>
-    <p>Policija je tokom istrage o dvije organizovane grupe oduzela novac, vozila, oružje i narkotike.</p>
-</article>
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    margin-right: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff3333;
+}
+
+.hero {
+    padding: 65px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #171717, #090909);
+    border-bottom: 1px solid #292929;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin: 0 0 12px;
+}
+
+.hero h1 span {
+    color: #e00000;
+}
+
+.hero p {
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+main {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 25px;
+    border-left: 4px solid #c40000;
+    padding-left: 13px;
+    margin-bottom: 25px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 17px;
+}
+
+.news-card {
+    display: block;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 7px;
+    padding: 23px;
+    min-height: 125px;
+    text-decoration: none;
+    color: #eeeeee;
+    transition: 0.2s;
+}
+
+.news-card:hover {
+    border-color: #c40000;
+    background: #1d1d1d;
+    transform: translateY(-3px);
+}
+
+.category {
+    color: #e00000;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.news-card h2 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+footer {
+    background: #111111;
+    border-top: 2px solid #c40000;
+    text-align: center;
+    padding: 28px 15px;
+    color: #888888;
+    margin-top: 60px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 12px 0 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">SUDSKI <span>DOSIJE</span></h2>
+
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="#vijesti">Najnovije vijesti</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>ISTRAŽUJEMO <span>ČINJENICE.</span></h1>
+    <p>Kriminal, istrage, policijske akcije i sudski postupci.</p>
+</section>
+
+<main id="vijesti">
+
+    <h2 class="section-title">Najnovije vijesti</h2>
+
+    <div class="news-grid">
+
+        <a class="news-card" href="vijest1.html">
+            <div class="category">SUDSKI POSTUPCI</div>
+            <h2>Sud BiH izrekao ukupno 83 godine zatvora u predmetu Obradović i drugi</h2>
+        </a>
+
+        <a class="news-card" href="vijest2.html">
+            <div class="category">SUDNICE</div>
+            <h2>Milan Mijić oslobođen od optužbe pred Sudom BiH</h2>
+        </a>
+
+        <a class="news-card" href="vijest3.html">
+            <div class="category">PRESUDE</div>
+            <h2>Vrhovni sud FBiH potvrdio osuđujući dio presude Kabiloviću i Haliloviću</h2>
+        </a>
+
+        <a class="news-card" href="vijest4.html">
+            <div class="category">PRAVOSUĐE</div>
+            <h2>Sud BiH: Aktuelna dešavanja i rad institucije</h2>
+        </a>
+
+        <a class="news-card" href="vijest5.html">
+            <div class="category">OPTUŽNICE</div>
+            <h2>Sud BiH potvrdio optužnicu protiv šest osoba zbog zločina protiv čovječnosti</h2>
+        </a>
+
+        <a class="news-card" href="vijest6.html">
+            <div class="category">PRESUDE</div>
+            <h2>Zdravko Šagolj osuđen na dvije godine i deset mjeseci zatvora</h2>
+        </a>
+
+        <a class="news-card" href="vijest7.html">
+            <div class="category">POLICIJSKE ISTRAGE</div>
+            <h2>150 kilograma droge, amfetaminsko ulje i više od 100.000 KM: Razbijane dvije kriminalne grupe</h2>
+        </a>
+
+        <a class="news-card" href="vijest8.html">
+            <div class="category">CRNA HRONIKA</div>
+            <h2>Nihad Bjelak uhapšen u Sarajevu: Policija zaplijenila 73 kilograma marihuane</h2>
+        </a>
+
+        <a class="news-card" href="vijest9.html">
+            <div class="category">MEĐUNARODNE ISTRAGE</div>
+            <h2>Droga stigla iz luke Ploče: Devet osoba uhapšeno u međunarodnoj istrazi</h2>
+        </a>
+
+        <a class="news-card" href="vijest10.html">
+            <div class="category">PRETRESI</div>
+            <h2>Kokain, heroin, marihuana i tri pištolja pronađeni tokom pretresa 12 lokacija</h2>
+        </a>
+
+        <a class="news-card" href="vijest11.html">
+            <div class="category">CRNA HRONIKA</div>
+            <h2>Lažna EUROPOL-ova iskaznica i lijekovi: SIPA uhapsila četiri osobe</h2>
+        </a>
+
+        <a class="news-card" href="vijest12.html">
+            <div class="category">SUDNICE</div>
+            <h2>„Šmrk“ i „Magla“ pred sudom: Optužnica zbog droge, oružja i pranja novca</h2>
+        </a>
+
+        <a class="news-card" href="vijest13.html">
+            <div class="category">FINANSIJSKE ISTRAGE</div>
+            <h2>Više od šest miliona KM: Kako je novac sumnjivog porijekla završavao u legalnim tokovima</h2>
+        </a>
+
+        <a class="news-card" href="vijest14.html">
+            <div class="category">POLICIJSKE AKCIJE</div>
+            <h2>Petnaest uhapšenih, devet automobila i motocikl: Detalji velike policijske akcije</h2>
+        </a>
+
+    </div>
+</main>
+
+<footer>
+    <p><strong>SUDSKI DOSIJE</strong></p>
+    <p>Informacije o kriminalu, istragama i pravosuđu.</p>
+    <p>© 2026 Sudski Dosije. Sva prava zadržana.</p>
+</footer>
+
+</body>
+</html>
