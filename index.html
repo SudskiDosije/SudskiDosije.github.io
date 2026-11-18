@@ -5,174 +5,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sudski Dosije</title>
-
 <style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background: #0b0b0b;
-    color: #ddd;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.7;
-}
-
-header {
-    background: #111;
-    padding: 22px;
-    text-align: center;
-    border-bottom: 3px solid #c40000;
-}
-
-header h2 {
-    color: white;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-header span {
-    color: #c40000;
-}
-
-nav {
-    margin-top: 8px;
-}
-
-nav a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 13px;
-    margin: 0 10px;
-}
-
-nav a:hover {
-    color: #c40000;
-}
-
-.hero {
-    text-align: center;
-    padding: 35px 15px 45px;
-    border-bottom: 1px solid #222;
-}
-
-.hero h1 {
-    color: white;
-    margin: 0;
-    font-size: 28px;
-}
-
-.hero h1 span {
-    color: #c40000;
-}
-
-.hero p {
-    color: #999;
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-main {
-    max-width: 1100px;
-    margin: 25px auto;
-    padding: 10px 15px 30px;
-}
-
-.section-title {
-    color: white;
-    border-left: 3px solid #c40000;
-    padding-left: 10px;
-    font-size: 18px;
-    margin-bottom: 18px;
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.news-card {
-    background: #151515;
-    border: 1px solid #242424;
-    border-radius: 6px;
-    padding: 15px;
-    min-height: 110px;
-    transition: 0.2s;
-}
-
-.news-card:hover {
-    border-color: #c40000;
-    transform: translateY(-2px);
-}
-
-.category {
-    color: #c40000;
-    font-size: 9px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.news-card a {
-    display: block;
-    color: #eee;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin-top: 5px;
-}
-
-.news-card a:hover {
-    color: #c40000;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #777;
-    border-top: 1px solid #c40000;
-    font-size: 12px;
-    background: #111;
-    margin-top: 20px;
-}
-
-@media (max-width: 700px) {
-    .news-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 450px) {
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-}
+*{box-sizing:border-box}
+body{background:#0b0b0b;color:#ddd;font-family:Arial,sans-serif;margin:0;line-height:1.7}
+header{background:#111;padding:22px;text-align:center;border-bottom:3px solid #c40000}
+header h2{color:white;margin:0;letter-spacing:2px}
+header span{color:#c40000}
+nav{margin-top:8px}
+nav a{color:#aaa;text-decoration:none;font-size:13px;margin:0 10px}
+nav a:hover{color:#c40000}
+.hero{text-align:center;padding:35px 15px 45px;border-bottom:1px solid #222}
+.hero h1{color:white;margin:0;font-size:28px}
+.hero h1 span{color:#c40000}
+.hero p{color:#999;font-size:14px;margin:5px 0}
+main{max-width:1100px;margin:25px auto;padding:10px 15px 30px}
+.section-title{color:white;border-left:3px solid #c40000;padding-left:10px;font-size:18px;margin-bottom:18px}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.news-card{background:#151515;border:1px solid #242424;border-radius:6px;padding:15px;min-height:110px;transition:.2s}
+.news-card:hover{border-color:#c40000;transform:translateY(-2px)}
+.category{color:#c40000;font-size:9px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
+.news-card a{display:block;color:#eee;text-decoration:none;font-size:14px;font-weight:bold;line-height:1.5;margin-top:5px}
+.news-card a:hover{color:#c40000}
+footer{text-align:center;padding:25px;color:#777;border-top:1px solid #c40000;font-size:12px;background:#111;margin-top:20px}
+@media(max-width:700px){.news-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:450px){.news-grid{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
 
 <header>
-    <h2>SUDSKI <span>DOSIJE</span></h2>
-    <nav>
-        <a href="index.html">Početna</a>
-        <a href="#vijesti">Najnovije vijesti</a>
-    </nav>
+<h2>SUDSKI <span>DOSIJE</span></h2>
+<nav>
+<a href="index.html">Početna</a>
+<a href="#vijesti">Najnovije vijesti</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>ISTRAŽUJEMO <span>ČINJENICE.</span></h1>
-    <p>Kriminal, istrage, policijske akcije i sudski postupci.</p>
+<h1>ISTRAŽUJEMO <span>ČINJENICE.</span></h1>
+<p>Kriminal, istrage, policijske akcije i sudski postupci.</p>
 </section>
 
 <main id="vijesti">
-
 <h3 class="section-title">Najnovije vijesti</h3>
 
 <div class="news-grid">
+
+<div class="news-card">
+<div class="category">Policijske istrage</div>
+<a href="vijest21.html">Akcija „Krug“: Uhapšena službenica SIPA-e zbog sumnje na odavanje informacija iz istraga</a>
+</div>
+
+<div class="news-card">
+<div class="category">Crna hronika</div>
+<a href="vijest22.html">Sarajevo: Tužilaštvo zatražilo pritvor zbog sumnje na otmicu i razbojništvo</a>
+</div>
+
+<div class="news-card">
+<div class="category">Međunarodne policijske akcije</div>
+<a href="vijest23.html">Akcija „Mozaik 2026“: Četiri osobe uhapšene u BiH u međunarodnoj istrazi</a>
+</div>
 
 <div class="news-card">
 <div class="category">Sudski postupci</div>
@@ -278,9 +170,9 @@ footer {
 </main>
 
 <footer>
-    SUDSKI DOSIJE
-    <p>Informacije o kriminalu, istragama i pravosuđu.</p>
-    © 2026 Sudski Dosije. Sva prava zadržana.
+SUDSKI DOSIJE
+<p>Informacije o kriminalu, istragama i pravosuđu.</p>
+© 2026 Sudski Dosije. Sva prava zadržana.
 </footer>
 
 </body>
